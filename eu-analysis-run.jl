@@ -6,7 +6,7 @@ using Dates
 
 # Assuming you have a predefined list of model names and their corresponding input directories
 models = Dict(
-    "NWEU_1h" => "NWEU_Zhi",
+    #"NWEU_1h" => "NWEU_Zhi",
     #"NWEU_2h_first" => "NWEU_2h/NWEU_2h_first",
     #"NWEU_2h_last" => "NWEU_2h/NWEU_2h_last",
     #"NWEU_2h_max" => "NWEU_2h/NWEU_2h_max",
@@ -27,7 +27,7 @@ models = Dict(
     #"NWEU_4h_min" => "NWEU_4h/NWEU_4h_min",
     #"NWEU_4h_mean" => "NWEU_4h/NWEU_4h_mean",
     #"NWEU_4h_median" => "NWEU_4h/NWEU_4h_median",
-    #"NWEU_4h_mid" => "NWEU_4h/NWEU_4h_mid",
+    "NWEU_4h_mid" => "NWEU_4h_mid",
     # Add more models as needed
 )
 
@@ -53,9 +53,9 @@ for (model_name, input_dir) in models
     push!(df, (model_name, obj_value, solve_times))
 end
 
-csv_file_name = "model_results_1h_obj_solve_" * Dates.format(now(), "YYYYmmdd_HHMMSS") * ".csv"
-CSV.write(csv_file_name, df)
+#csv_file_name = "model_results_1h_obj_solve_" * Dates.format(now(), "YYYYmmdd_HHMMSS") * ".csv"
+#CSV.write(csv_file_name, df)
 
-println("Results exported to $csv_file_name")
+#println("Results exported to $csv_file_name")
 
 
